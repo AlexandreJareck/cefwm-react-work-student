@@ -1,6 +1,4 @@
-import React from "react";
-import Header from "../../components/Header";
-import ProductOrder from "./components/ProductOrder";
+import ProductOrder, { ProductOrderList } from "./components/ProductOrder";
 import {
   BreakLine,
   Button,
@@ -33,7 +31,11 @@ export default function Order() {
   return (
     <Container>
       <Wrapper color={"white"} maxWidth={"60%"}>
-
+        <GroupItem>
+          <div style={{margin: '1.5rem'}}>
+            <ProductOrderList />
+          </div>
+        </GroupItem>
       </Wrapper>
       <Wrapper color={"lightcyan"} maxWidth={"40%"}>
         <Heading>
