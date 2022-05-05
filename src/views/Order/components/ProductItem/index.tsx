@@ -3,30 +3,33 @@ import { Container, Item } from "../ProductOrder/styles";
 import { Button, Span } from "./styles";
 import { CgMathMinus, CgMathPlus } from "react-icons/Cg";
 import { MoneyFormatter } from "../../../../utils/MoneyFormat";
+import { useOrderItem } from "../../../../hooks/useOrderItem";
+import { Product } from "../../../../models/Product";
 
 export type ProductItemProps = {
-  name: string;
-  price: number;
+  product: Product
 };
 
-export function ProductItem({ name, price }: ProductItemProps) {
+export function ProductItem({product}: ProductItemProps) {
+  const { addItem, removeItem } = useOrderItem();
+
   return (
     <Container>
       <Item flexGrow={1}>
-        <Span>{name}</Span>
+        <Span>{product.nome}</Span>
       </Item>
       <Item flexGrow={0}>
-        <Span>{MoneyFormatter.format(price)}</Span>
+        <Span>{MoneyFormatter.format(product.preco)}</Span>
       </Item>
       <Item flexGrow={0}>
-        <Button>
+        <Button onClick={() => addItem(product)}>
           <span>
-            <CgMathPlus />
+            <CgMathPlus/>
           </span>
         </Button>
       </Item>
       <Item flexGrow={0}>
-        <Button>
+        <Button onClick={() => removeItem(product)}>
           <span>
             <CgMathMinus />
           </span>

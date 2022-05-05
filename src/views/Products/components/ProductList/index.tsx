@@ -1,7 +1,4 @@
-import { useState, useEffect } from "react";
 import { useProducts } from "../../../../hooks/useProducts";
-import { Product } from "../../../../models/Produto";
-import { getProdutos } from "../../../../services/ProdutosService";
 import { MoneyFormatter } from "../../../../utils/MoneyFormat";
 import { Container } from "./styles";
 

@@ -1,6 +1,6 @@
 import API from './API';
 
-import { Product } from '../models/Produto';
+import { Product } from '../models/Product';
 import { ProductInputDTO } from '../dtos/ProductInputDTO';
 
 export const getProdutos = async () : Promise<Product[]> => {

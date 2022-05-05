@@ -3,7 +3,10 @@ import styled from "styled-components";
 export const Span = styled.span`
   padding: 2.5rem;
 `
-export const Button = styled.button`
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>
+
+export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   color: #0dcaf0;
   border-color: #0dcaf0;

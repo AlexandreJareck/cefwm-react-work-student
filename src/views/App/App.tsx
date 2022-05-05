@@ -1,11 +1,14 @@
 import Header from "../../components/Header";
+import { OrderItemProvider } from "../../hooks/useOrderItem";
 import { ProductsProvider } from "../../hooks/useProducts";
 import "./App.css";
 
 function App() {
   return (
     <ProductsProvider>
-      <Header />
+      <OrderItemProvider>
+        <Header />
+      </OrderItemProvider>
     </ProductsProvider>
   );
 }

@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { ProductInputDTO } from "../dtos/ProductInputDTO";
-import { Product } from "../models/Produto";
-import { getProdutos, postProduto } from "../services/ProdutosService";
+import { Product } from "../models/Product";
+import { getProdutos, postProduto } from "../services/ProductService";
 
 interface ProductsContextData {
   products: Product[];

@@ -3,7 +3,7 @@ import { Container, Item } from "./styles";
 export type ProductOrderProps = {
   quantity: number;
   name: string;
-  total: number;
+  total: string;
 };
 export default function ProductOrder({
   quantity,
