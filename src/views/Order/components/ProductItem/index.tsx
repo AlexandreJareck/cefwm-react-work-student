@@ -8,10 +8,11 @@ import { Product } from "../../../../models/Product";
 
 export type ProductItemProps = {
   product: Product
+  addItem: (product: Product) => void
+  removeItem: (product: Product) => void
 };
 
-export function ProductItem({product}: ProductItemProps) {
-  const { addItem, removeItem } = useOrderItem();
+export function ProductItem({product, addItem, removeItem}: ProductItemProps) {
 
   return (
     <Container>

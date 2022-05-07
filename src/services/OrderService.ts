@@ -14,5 +14,9 @@ export const createOrderItem = async (pedidoItems: OrderItem[], uuid: string): P
   let obj = {
     pedidoItems
   }
+  obj.pedidoItems.forEach(element => {
+    element.produto = element.product.uuid
+  });
+
   return (await API().post(`/pedidos/${uuid}/pedidoItems`, obj)).data;
 }
